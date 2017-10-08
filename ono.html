@@ -6,31 +6,59 @@
   <title>Title</title>
   <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
   <style>
-ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    background-color: #333;
-}
+    .footer {
+      height: 6.25rem;
+    }
+  </style>
 
-li {
-    float: left;
-}
+<script type="text/javascript">
+	$(document).ready(function(){
+		$('#radioContainer > input').each(function(){
+			var radioInput = $(this);
+			if(radioInput.is(':checked')){
+				$('#radioContainer').animate({
+					scrollTop: radioInput.offset().top
+				}, 2000);
+</script>
+</head>
+<body>
+  <div class="container">
+    <div class="page-header col-md-12">
+      <h1>Onondaga County</h1>
+    </div>
+    <div class="row">
+      <div class="col-md-4">
+        <div class="container">
 
-li a {
-    display: block;
-    color: white;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-}
+<div>
+	<h1>Data</h1>
+	<u><h3>Using 2.5MW GE Turbine</p></u>
+	<p>A = (r^2)pi = (53.6^2)pi</p>
+	<button onClick="a()">Calculate</button>
+	<p id="area"></p>
+	<script>
+		function a(){
+			document.getElementById("area").innerHTML = Math.pow(54,2);
+		}
+</script>
 
-li a:hover:not(.active) {
-    background-color: #111;
-}
+	<p>Possible Savings$</p>
+	<button onClick="xAvg()">Calculate</button>
+	<p id="avg1"></p>
+	<script>
+	function xAvg(){
+			document.getElementById("avg1").innerHTML = (((.1174 * 8760 * .25*.5*1.225*Math.pow(5.36,2)*Math.PI) + (13.74 * 8760 * .45*.5*1.225*Math.pow(5.36,5)*Math.PI) )/2).toFixed(2);
+		}	
+</script>
 
-.embed-container {
+</div>
+</div>
+
+      </div>
+      <div class="col-md-8 embed-responsive embed-responsive-16by9">
+        
+        <style>
+          .embed-container {
             position: relative;
             padding-bottom: 80%;
             height: 0;
@@ -51,47 +79,8 @@ li a:hover:not(.active) {
             bottom: 0;
             margin-bottom: -15px;
           }
-   
- .footer {
-      height: 6.25rem;
-    }
-  </style>
-
-<script type="text/javascript">
-	$(document).ready(function(){
-		$('#radioContainer > input').each(function(){
-			var radioInput = $(this);
-			if(radioInput.is(':checked')){
-				$('#radioContainer').animate({
-					scrollTop: radioInput.offset().top
-				}, 2000);
-</script>
-</head>
-<body>
-  <div class="container">
-    <div class="page-header col-md-12">
-      <h1>Onondoga County</h1>
-    </div>
-    <div class="row">
-      <div class="col-md-4">
-        <div class="container">
-
-
-<ul>
-  <li><a href="#home">Home</a></li>
-  <li><a href="#wind">Wind Power</a></li>
-  <li><a href="#solar">Solar Power</a></li>
-  <li><a href="#water">Hydro Power</a></li>
-</ul>
-
-      </div>
-      <div class="col-md-8 embed-responsive embed-responsive-16by9">
-        
-            </div>
-      <div class="embed-responsive embed-responsive-16by9">
-       
-	<section id="home">
-        <div class>
+        </style>
+        <div class="embed-container">
           <iframe
             width="500"
             height="400"
@@ -99,72 +88,14 @@ li a:hover:not(.active) {
             scrolling="no"
             marginheight="0"
             marginwidth="0"
-            title="Orange County All" src="https://arcg.is/1TW8HX">
+            title="Saint Lawrence County Wind" src="https://arcg.is/1TW8HX">
           </iframe>
         </div>
-        
-      </div>
-	</section>
-<br><br>
-	<section id="wind">
-<div class>
-          <iframe
-            width="500"
-            height="400"
-            frameborder="0"
-            scrolling="no"
-            marginheight="0"
-            marginwidth="0"
-            title="Orange County Wind" src="//www.arcgis.com/apps/Embed/index.html?webmap=d6219965cc8c40718e2212e0825d10b9&amp;extent=-81.2375,40.0773,-70.3886,45.0379&amp;zoom=true&amp;previewImage=false&amp;scale=true&amp;legend=true&amp;disable_scroll=true&amp;theme=light">
-          </iframe>
-        </div>
-	</section>
-<br><br>
-	<section id="solar">
-<div class>
-          <iframe
-            width="500"
-            height="400"
-            frameborder="0"
-            scrolling="no"
-            marginheight="0"
-            marginwidth="0"
-            title="Orange County Solar" src="//www.arcgis.com/apps/Embed/index.html?webmap=d6219965cc8c40718e2212e0825d10b9&amp;extent=-81.2375,40.0773,-70.3886,45.0379&amp;zoom=true&amp;previewImage=false&amp;scale=true&amp;legend=true&amp;disable_scroll=true&amp;theme=light">
-          </iframe>
-        </div>
-	</section>
-<br><br>
-	<section id="water">
-<div class>
-          <iframe
-            width="500"
-            height="400"
-            frameborder="0"
-            scrolling="no"
-            marginheight="0"
-            marginwidth="0"
-            title="Orange County Water" src="//www.arcgis.com/apps/Embed/index.html?webmap=d6219965cc8c40718e2212e0825d10b9&amp;extent=-81.2375,40.0773,-70.3886,45.0379&amp;zoom=true&amp;previewImage=false&amp;scale=true&amp;legend=true&amp;disable_scroll=true&amp;theme=light">
-          </iframe>
-        </div>
-	</section>
-                  
-                </div>
-<button class="btn btn-primary" data-dismiss="modal" type="button">
-                    <i class="fa fa-times"></i>
-                    Close Project</button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-</div>
         
       </div>
     </div>
     <footer class="footer">
       <div class="container">
-        <p class="text-muted">Footer content</p>
       </div>
     </footer>
   </div>

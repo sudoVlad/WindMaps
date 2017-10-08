@@ -24,18 +24,36 @@
 <body>
   <div class="container">
     <div class="page-header col-md-12">
-      <h1>Saint Lawerence County</h1>
+      <h1>Saint Lawrence County</h1>
     </div>
     <div class="row">
       <div class="col-md-4">
         <div class="container">
 
+<div>
+	<h1>Data</h1>
+	<u><h3>Using 2.5MW GE Turbine</p></u>
+	<p>A = (r^2)pi = (53.6^2)pi</p>
+	<button onClick="a()">Calculate</button>
+	<p id="area"></p>
+	<script>
+		function a(){
+			document.getElementById("area").innerHTML = Math.pow(54,2);
+		}
+</script>
 
-<div id="radioContainer">
-    <input type="radio" name="energy" value="wind"/>Wind Power
-    <input type="radio" name="energy" value="solar"/>Solar Power
-    <input type="radio" name="energy" value="hydro"/>Hydroponic Power</div>
+	<p>Possible Savings$</p>
+	<p>Potsdam</p>
+	<button onClick="xAvg()">Calculate</button>
+	<p id="avg1"></p>
+	<p id="avg2i"></p>
+	<script>
+	function xAvg(){
+			document.getElementById("avg1").innerHTML = (((11.74 * 8760 * (.25*.5*1.225*Math.pow(5.36,2)*Math.pow(3.576,3)*Math.PI)/10000) + ((13.74 * 8760 * .45*.5*1.225*Math.pow(5.36,5)*Math.PI) )/2).toFixed(2);
+		}	
+</script>
 
+</div>
 </div>
 
       </div>
@@ -72,7 +90,7 @@
             scrolling="no"
             marginheight="0"
             marginwidth="0"
-            title="Saint Lawrence County Wind" src="//www.arcgis.com/apps/Embed/index.html?webmap=d6219965cc8c40718e2212e0825d10b9&amp;extent=-81.2375,40.0773,-70.3886,45.0379&amp;zoom=true&amp;previewImage=false&amp;scale=true&amp;legend=true&amp;disable_scroll=true&amp;theme=light">
+            title="Saint Lawrence County Wind" src="https://arcg.is/u1Kbr">
           </iframe>
         </div>
         
@@ -80,7 +98,6 @@
     </div>
     <footer class="footer">
       <div class="container">
-        <p class="text-muted">Footer content</p>
       </div>
     </footer>
   </div>
