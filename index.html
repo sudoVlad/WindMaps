@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+ <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
@@ -12,11 +12,12 @@
   <h2>Green Maps</h2>
 
 <form>Select a Location:
-<select>Select a Location
-	<option value="town/city">Town/City</option>
+<select name="value" id="location" onChange="listCounties()"> Select a Location
+	<option value="base" selected="selected">Please Select</option>
 	<option value="county">County</option>
 	<option value="state">State</option>
-</select> 
+</select>
+
 <form>Location Name <input type="text" location="location"> 
 <form action=/graph.php"><input type="submit" value="Submit"> 
 
@@ -28,10 +29,94 @@
   <input type="checkbox" name="energy" value="Wind"> Wind Power
 </form>
 
+
+<form>
+	<ul> Counties
+		<li>Allegany County</ul>
+		   <li> Albany County</ul>
+		   <li> Allegany County</ul>
+		   <li> Bronx County</ul>
+		   <li> Broome County</ul>
+		   <li> Cattaraugus County</ul>
+		   <li> Cayuga County</ul>
+		   <li> Chautauqua County</ul>
+		   <li> Chemung County</ul>
+		   <li> Chenango County</ul>
+		   <li> Clinton County</ul>
+		   <li> Columbia County</ul>
+		   <li> Cortland County</ul>
+		   <li> Delaware County</ul>
+		   <li> Dutchess County</ul>
+		   <li> Erie County</ul>
+		   <li> Essex County</ul>
+		   <li> Franklin County</ul>
+		   <li> Fulton County</ul>
+		   <li> Genesee County</ul>
+		   <li> Greene County</ul>
+		   <li> Hamilton County</ul>
+		   <li> Herkimer County</ul>
+		   <li>Jefferson County</ul>
+		   <li> Kings County (Brooklyn)</ul>
+		   <li> Lewis County</ul>
+		   <li> Livingston County</ul>
+		   <li> Madison County</ul>
+		   <li> Monroe County</ul>
+		   <li> Montgomery County</ul>
+		   <li> Nassau County</ul>
+		   <li> New York County (Manhattan)</ul>
+		   <li> Niagara County</ul>
+		   <li> Oneida County</ul>
+		   <li> Onondaga County</ul>
+		   <li> Ontario County</ul>
+		   <li> Orange County</ul>
+		   <li> Orleans County</ul>
+		   <li> Oswego County</ul>
+		   <li> Otsego County</ul>
+		   <li> Putnam County</ul>
+		   <li> Queens County</ul>
+		   <li> Rensselaer County</ul>
+		   <li> Richmond County (Staten Island)</ul>
+		   <li> Rockland County</ul>
+		   <li> Saint Lawrence County</ul>
+		   <li> Saratoga County</ul>
+		   <li> Schenectady County</ul>
+		   <li> Schoharie County</ul>
+		   <li> Schuyler County</ul>
+		   <li> Seneca County</ul>
+		   <li> Steuben County</ul>
+		   <li> Suffolk County</ul>
+		   <li> Sullivan County</ul>
+		   <li> Tioga County</ul>
+		   <li> Tompkins County</ul>
+		   <li> Ulster County</ul>
+		   <li> Warren County</ul>
+		   <li> Washington County</ul>
+		   <li> Wayne County</ul>
+		   <li> Westchester County</ul>
+		   <li> Wyoming County</ul>
+		   <li> Yates County</ul>
+
+</form>
+
 </form>
 </form>	
 
-	
 </div>
+
+<script>
+	function listCounties(){
+		var counties = ['Allegany County', 'Bronx County', 'Broome County', 'Cattaraugus County','Cayuga County','Chautauqua County','Chemung County',' Chenango County','Clinton County','Columbia County','Cortland County','Delaware County',' Dutchess County',' Erie County',' Essex County','Franklin County','Fulton County','Genesee County','Greene County','Hamilton County','Herkimer County','Jefferson County','Kings County (Brooklyn)','Lewis County','Livingston County','Madison County','Monroe County','Montgomery County','Nassau County',' New York County (Manhattan)', 'Niagara County','Oneida County','Onondaga County','Ontario County','Orange County','Orleans County','Oswego County','Otsego County','Putnam County','Queens County',' Rensselaer County','Richmond County (Staten Island)','Rockland County','Saint Lawrence County','Saratoga County','Schenectady County','Schoharie County','Schuyler County','Seneca County','Steuben County','Suffolk County','Sullivan County','Tioga County','Tompkins County','Ulster County',' Warren County',' Washington County','Wayne County',' Westchester County','Wyoming County','Yates County];
+		var x = document.getElementById("location").value;
+		if (x == 'County') {
+			for(i = 0; i<counties.length; i++){
+			document.write(counties[x]));			
+			}
+		}else {
+			document.write("");
+	
+		}
+	}
+</script>
+
 </body>
 </html>
