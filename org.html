@@ -10,31 +10,34 @@
       height: 6.25rem;
     }
   </style>
+
+<script type="text/javascript">
+	$(document).ready(function(){
+		$('#radioContainer > input').each(function(){
+			var radioInput = $(this);
+			if(radioInput.is(':checked')){
+				$('#radioContainer').animate({
+					scrollTop: radioInput.offset().top
+				}, 2000);
+</script>
 </head>
 <body>
   <div class="container">
     <div class="page-header col-md-12">
-      <h1>Embedding WebMaps into existing pages</h1>
+      <h1>Orange County</h1>
     </div>
     <div class="row">
       <div class="col-md-4">
-        <h1>Hawaii Island Lava Flow Risk</h1>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-          Donec ullamcorper nulla non metus auctor fringilla.
-          Donec ullamcorper nulla non metus auctor fringilla.
-          Morbi leo risus, porta ac consectetur ac, vestibulum at eros.
-          Nullam id dolor id nibh ultricies vehicula ut id elit.
-        </p>
-        <p>
-          Morbi leo risus, porta ac consectetur ac, vestibulum at eros.
-          Donec id elit non mi porta gravida at eget metus.
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-          Sed posuere consectetur est at lobortis.
-          Curabitur blandit tempus porttitor.
-          Aenean eu leo quam.
-          Pellentesque ornare sem lacinia quam venenatis vestibulum.
-        </p>
+        <div class="container">
+
+
+<div id="radioContainer">
+    <input type="radio" name="energy" value="wind"/>Wind Power
+    <input type="radio" name="energy" value="solar"/>Solar Power
+    <input type="radio" name="energy" value="hydro"/>Hydroponic Power</div>
+
+</div>
+
       </div>
       <div class="col-md-8 embed-responsive embed-responsive-16by9">
         
@@ -85,4 +88,3 @@
   <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </body>
-</html>
